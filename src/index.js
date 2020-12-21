@@ -77,6 +77,8 @@ function Blog(props) {
           <br />
           <p>{props.blog.content_line1}</p>
           <p>{props.blog.content_line2}</p>
+          <br />
+          <p>{props.blog.content_line3}</p>
           <p>Available colors:</p>
           <ul>
             {colors}
