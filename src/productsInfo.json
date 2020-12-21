@@ -1,0 +1,30 @@
+{
+  "products":[
+    {
+      "id": 1,
+      "title": "Bose Noise Cancelling 700 Wireless Headphones (Refurbished)",
+      "dealPrice": "$212.50",
+      "originalPrice": "$399.95",
+      "shipping": "Free",
+      "content_line1": "Bose via eBay has Bose Noise Cancelling 700 Wireless Headphones (Refurbished, Black or Soapstone) on sale for $212.46 when you apply coupon code PURCHASECR15 at checkout. Shipping is free.",
+      "content_line2": "Thanks to community member sfdsk for finding this deal.",
+      "available_colors": ["Black", "Soapstone"],
+      "image_url": "/media/products/bose.jpg",
+      "submitter": "sfdsk"
+    },
+    {
+      "id": 2,
+      "title": "Best Ride On Cars Maserati Ghibli 12V Kids' Electric Car + $30 Kohl's Cash",
+      "dealPrice": "$150",
+      "originalPrice": "$299.99",
+      "shipping": "Free",
+      "content_line1": "Kohl's has Best Ride On Cars Maserati Ghibli 12V Kids' Electric Car (Red) + $30 Kohl's Cash (reflected in cart) on sale for $149.99. Shipping is free.",
+      "content_line2": "Thanks to community member anni77777 for finding this deal.",
+      "content_line3": "Note: Kohl's Cash may be redeemed December 25 - January 3 (details). Must select red color to get free shipping.",
+      "available_colors": [],
+      "image_url": "/media/products/masareti.jpg",
+      "submitter": "anni77777"
+    }
+   
+  ]
+}
