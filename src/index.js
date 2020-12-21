@@ -11,27 +11,15 @@ import Button from 'react-bootstrap/Button';
 import { Card, Col, Container, Form, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
 import { Star, PersonBadge, StarFill } from 'react-bootstrap-icons';
 // import {  } from 'react-router';
-import { BrowserRouter as Router, Route,Switch, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useParams } from 'react-router-dom';
 import { products } from './productsInfo.json';
 
-// import {bose} from '';
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-// function Clock(props){
-//   return (
-
-//   );
-// }
-
 function NavHeader() {
-  return (<Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="/home">Slick Deals</Navbar.Brand>
+  return (<Navbar bg="light" variant="light" className="topNav">
+
+    <Navbar.Brand href="/home">
+      <img src="/media/logos/flash_deals_LD.PNG" />
+    </Navbar.Brand>
     <Navbar.Collapse id="nav-collapse" >
 
       <Nav.Item>
@@ -76,6 +64,7 @@ function Blog(props) {
   return (
 
     <Container className="bg-main-container w-75">
+
       <h1 className="dealTitle">{props.blog.title}</h1>
       <Row md="11" >
         <Col md="8">
@@ -138,51 +127,28 @@ function HomeController(props) {
   });
 
   return (
-    <div>
-      {/* <NavHeader /> */}
+    <Container>
       <br />
-      <Container>
-        <Row>
-
-          {productCards}
-
-        </Row>
-
-
-      </Container>
-    </div>
+      <Row>
+        {productCards}
+      </Row>
+    </Container>
   );
 }
 
 function BlogController(props) {
 
-  var {id} = useParams();
+  var { id } = useParams();
   const blog = products.map((blogItem) => {
 
-    if(parseInt(id) === blogItem.id)
-    return <Blog key={blogItem.id} blog={blogItem}/>;
-  }  );
-
-  // const sideBar = blogData.map((blogItem) => <SideBar key={blogItem.id} blog={blogItem} />);
-
-  // const numberList = numbers.map((number) =>
-  //   <ListItem key={number.toString()}
-  //     id={number.toString()}
-  //     number={number} />
-  // );
+    if (parseInt(id) === blogItem.id)
+      return <Blog key={blogItem.id} blog={blogItem} />;
+  });
 
   return (
     <div>
-
-
-
       <br />
-
       {blog}
-
-
-
-
     </div>
   );
 
@@ -206,118 +172,11 @@ function SlickAppController() {
 }
 
 
-ReactDOM.render(<SlickAppController />, document.getElementById('root'));
-
-
-
-/* function UserGreeting(){
-  return <h1>Welcome back</h1>;
-}
-
-function GuestGreeting(){
-  return <h1>Please log in</h1>;
-}
-
-
-function WelcomeGreeting(props){
-  const loggedIn = props.isLoggedIn;
-  if(loggedIn){
-    return <UserGreeting />;
-  } else{
-    return <GuestGreeting />;
-  }
-}
-
-class LoginControl extends React.Component{
-  constructor(props){
-    super(props);
-    this.handleLogIn = this.handleLogIn.bind(this);
-    this.handleLogOut = this.handleLogOut.bind(this);
-    this.state={
-      isLoggedIn: false
-    }
-  }
-
-  handleLogOut(){
-    this.setState({
-      isLoggedIn: false
-    })
-  }
-
-  handleLogIn(){
-    this.setState({
-      isLoggedIn: true
-    })
-  }
-
-  render(){
-  let button;
-
-  if(this.state.isLoggedIn){
-    button =<button onClick={this.handleLogOut} > Logout </button>
-  } else{
-    button =<button onClick={this.handleLogIn} > LogIn </button>
-  }
-  return (
-    <div>
-      <WelcomeGreeting isLoggedIn = {this.state.isLoggedIn} />
-      {button}
-    </div>
-  );
-  }
-}
-
-
-ReactDOM.render(<LoginControl/>, document.getElementById('root'));
-
-/* class ClassyClock extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date(),
-      isToggleOn: true
-    }
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  componentDidMount() {
-    this.timerId = setInterval(() => {
-      this.setState({
-        date: new Date()
-      })
-    }, 1000);
-  }
-
-  componentDidUnmount() {
-    clearInterval(this.timerId);
-  }
-
-  handleClick() {
-    this.setState({
-      isToggleOn: !this.state.isToggleOn
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>Welcome to my clock example</h1>
-        <h3>{this.state.date.toLocaleString()}</h3>
-        <br />
-        <button onClick={this.handleClick}>{this.state.isToggleOn ? 'ON' : 'OFF'}</button>
-      </div>
-    );
-  }
-} */
-
-// ReactDOM.render(
-//   <ClassyClock  />, document.getElementById('root')
-// );
-
-
-
-// setInterval(Home, 1000);
+ReactDOM.render(
+  <React.StrictMode>
+    <SlickAppController />
+  </React.StrictMode>
+  , document.getElementById('root'));
 
 
 // If you want to start measuring performance in your app, pass a function
