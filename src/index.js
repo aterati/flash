@@ -18,7 +18,7 @@ function NavHeader() {
   return (<Navbar bg="light" variant="light" className="topNav">
 
     <Navbar.Brand href="/home">
-      <img src="/media/logos/flash_deals_LD.PNG" />
+      <img src="/media/logos/flash_deals_LD.jpg" />
     </Navbar.Brand>
     <Navbar.Collapse id="nav-collapse" >
 
